@@ -10,12 +10,13 @@
  */
 class VetorController {
     
-    public void validaVetor(double[] vetor) {
+    public boolean validaVetor(double[] vetor) {
         
         if (vetor == null) {
             throw new IllegalArgumentException("Vetor nulo");
-        }
+        } 
         
+        return true;
     }
     
 }

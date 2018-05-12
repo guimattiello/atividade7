@@ -23,7 +23,18 @@ public class VetorControllerTest {
         
         double[] vetor = null;
         
-        vc.validaVetor(vetor);
+        boolean validacao = vc.validaVetor(vetor);
+        
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void vetorVazioTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {};
+        
+        boolean validacao = vc.validaVetor(vetor);
         
     }
 }
