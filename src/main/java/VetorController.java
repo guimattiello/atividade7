@@ -14,7 +14,9 @@ class VetorController {
         
         if (vetor == null) {
             throw new IllegalArgumentException("Vetor nulo");
-        } 
+        } else if (vetor.length == 0) {
+            throw new IllegalArgumentException("Vetor vazio");
+        }
         
         return true;
     }
