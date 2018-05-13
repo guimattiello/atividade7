@@ -23,9 +23,8 @@ class VetorController {
 
         return true;
     }
-
-    double getMediana(double[] vetor) {
-
+    
+    double[] ordenaVetor(double[] vetor) {
         double temp;
         int j, i = 0;
         for (i = 0; i < vetor.length; i++) {
@@ -37,6 +36,12 @@ class VetorController {
                 }
             }
         }
+        return vetor;
+    }
+
+    double getMediana(double[] vetor) {
+
+        vetor = ordenaVetor(vetor);
         if (vetor.length % 2 == 1) {
             return vetor[vetor.length / 2];
         } else {
@@ -110,6 +115,19 @@ class VetorController {
         
         return Math.sqrt(new Variance().evaluate(vetor));
         
+    }
+    
+    double[] getNMaiores(double[] vetor, int n) {
+        
+        vetor = ordenaVetor(vetor);
+        
+        double[] retorno = new double[n];
+        
+        for (int i = 0; i < n; i++) {
+            retorno[i] = vetor[n - i - 1];
+        }
+        
+        return retorno;
     }
 
 }
