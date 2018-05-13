@@ -64,5 +64,17 @@ class VetorController {
         return menor;
         
     }
+    
+    double getMaiorValor(double[] vetor) {
+        
+        double maior = vetor[0];
+        int j = 0;
+        for (j = 0; j < vetor.length; j++) {
+            if (vetor[j] > maior)
+                maior = vetor[j];
+        }
+        return maior;
+        
+    }
 
 }
