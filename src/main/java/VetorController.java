@@ -129,5 +129,18 @@ class VetorController {
         
         return retorno;
     }
+    
+    double[] getNMenores(double[] vetor, int n) {
+        
+        vetor = ordenaVetor(vetor);
+        
+        double[] retorno = new double[n];
+        
+        for (int i = 0; i < n; i++) {
+            retorno[i] = vetor[vetor.length - i - 1];
+        }
+        
+        return retorno;
+    }
 
 }
