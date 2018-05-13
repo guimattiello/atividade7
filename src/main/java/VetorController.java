@@ -136,6 +136,10 @@ class VetorController {
     
     double[] getNMenores(double[] vetor, int n) {
         
+        if (n < 1) {
+            throw new IllegalArgumentException("Valor de n é inválido");
+        }
+        
         vetor = ordenaVetor(vetor);
         
         double[] retorno = new double[n];
