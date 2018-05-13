@@ -89,5 +89,18 @@ class VetorController {
         return qtde;
         
     }
+    
+    int getQtdeAbaixoMedia(double[] vetor) {
+        
+        double media = this.getMedia(vetor);
+        int qtde = 0;
+        int j = 0;
+        for (j = 0; j < vetor.length; j++) {
+            if (vetor[j] < media)
+                qtde++;
+        }
+        return qtde;
+        
+    }
 
 }
