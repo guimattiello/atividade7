@@ -136,4 +136,18 @@ public class VetorControllerTest {
         assertEquals(11.00, nMaiores[2], 0.01);
         
     }
+    
+    @Test
+    public void nMenoresTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00, 10.00, 11.00};
+        
+        double[] nMenores = vc.getNMenores(vetor, 2);
+        
+        assertEquals(1.00, nMenores[0], 0.01);
+        assertEquals(2.00, nMenores[1], 0.01);
+        
+    }
 }
