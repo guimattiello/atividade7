@@ -43,10 +43,10 @@ public class VetorControllerTest {
     
         VetorController vc = new VetorController();
         
-        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00};
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00};
         
         double mediana = vc.getMediana(vetor);
         
-        assertEquals(3.00, mediana, 0.01);
+        assertEquals(4.00, mediana, 0.01);
     }
 }
