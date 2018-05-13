@@ -150,4 +150,15 @@ public class VetorControllerTest {
         assertEquals(2.00, nMenores[1], 0.01);
         
     }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void nMaioresNZeroTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00, 10.00, 11.00};
+        
+        double[] nMaiores = vc.getNMaiores(vetor, 0);
+        
+    }
 }
