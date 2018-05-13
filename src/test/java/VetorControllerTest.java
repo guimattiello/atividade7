@@ -37,4 +37,16 @@ public class VetorControllerTest {
         boolean validacao = vc.validaVetor(vetor);
         
     }
+    
+    @Test
+    public void medianaTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00};
+        
+        double mediana = vc.getMediana(vetor);
+        
+        assertEquals(3.00, mediana, 0.01);
+    }
 }
