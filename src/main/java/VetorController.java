@@ -34,12 +34,23 @@ class VetorController {
                 }
             }
         }
-        if (vetor.length % 2 == 1){
-            return vetor[vetor.length/2];
+        if (vetor.length % 2 == 1) {
+            return vetor[vetor.length / 2];
         } else {
-            return (vetor[vetor.length/2] + vetor[(vetor.length/2)-1])/2;
+            return (vetor[vetor.length / 2] + vetor[(vetor.length / 2) - 1]) / 2;
         }
 
+    }
+
+    double getMedia(double[] vetor) {
+        
+        double soma = 0;
+        int j = 0;
+        for (j = 0; j < vetor.length; j++) {
+            soma += vetor[j];
+        }
+        return soma/vetor.length;
+        
     }
 
 }
