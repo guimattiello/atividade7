@@ -52,5 +52,17 @@ class VetorController {
         return soma/vetor.length;
         
     }
+    
+    double getMenorValor(double[] vetor) {
+        
+        double menor = vetor[0];
+        int j = 0;
+        for (j = 0; j < vetor.length; j++) {
+            if (vetor[j] < menor)
+                menor = vetor[j];
+        }
+        return menor;
+        
+    }
 
 }
