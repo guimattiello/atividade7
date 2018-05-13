@@ -49,4 +49,16 @@ public class VetorControllerTest {
         
         assertEquals(4.00, mediana, 0.01);
     }
+    
+    @Test
+    public void mediaTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00, 10.00, 11.00};
+        
+        double media = vc.getMedia(vetor);
+        
+        assertEquals(6.00, media, 0.01);
+    }
 }
