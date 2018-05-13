@@ -161,4 +161,15 @@ public class VetorControllerTest {
         double[] nMaiores = vc.getNMaiores(vetor, 0);
         
     }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void nMenoresNZeroTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00, 10.00, 11.00};
+        
+        double[] nMenores = vc.getNMenores(vetor, 0);
+        
+    }
 }
