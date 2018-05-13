@@ -61,4 +61,16 @@ public class VetorControllerTest {
         
         assertEquals(6.00, media, 0.01);
     }
+    
+    @Test
+    public void menorValorTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00, 10.00, 11.00};
+        
+        double menorValor = vc.getMenorValor(vetor);
+        
+        assertEquals(1.00, menorValor, 0.01);
+    }
 }
