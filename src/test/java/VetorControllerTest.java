@@ -121,4 +121,19 @@ public class VetorControllerTest {
         
         assertEquals(3.82, desvioPadrao, 0.01);
     }
+    
+    @Test
+    public void nMaioresTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00, 10.00, 11.00};
+        
+        double[] nMaiores = vc.getNMaiores(vetor, 3);
+        
+        assertEquals(9.00, nMaiores[0], 0.01);
+        assertEquals(10.00, nMaiores[1], 0.01);
+        assertEquals(11.00, nMaiores[2], 0.01);
+        
+    }
 }
