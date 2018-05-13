@@ -85,4 +85,16 @@ public class VetorControllerTest {
         
         assertEquals(11.00, maiorValor, 0.01);
     }
+    
+    @Test
+    public void qtdeAcimaMediaTest() {
+    
+        VetorController vc = new VetorController();
+        
+        double[] vetor = {2.00, 3.00, 1.00, 9.00, 7.00, 5.00, 10.00, 11.00};
+        
+        int qtdeAcimaMedia = vc.getQtdeAcimaMedia(vetor);
+        
+        assertEquals(4, qtdeAcimaMedia);
+    }
 }
